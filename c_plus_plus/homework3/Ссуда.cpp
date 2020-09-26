@@ -13,13 +13,16 @@ int main() {
 	cout << "Введите значение n" << endl;
 	cin >> n;
 	if (n != 0) {
-		for (r = 1; r <= 100; r++) {
+		for (p = 0; p <= 10000; p++) {
+			r = p / 100;
 			m1 = S * r * pow(1 + r, n) / (12 * (pow(1 + r, n) - 1));
 			if (m1 >= m) {
-				cout << "Процент равен " << r << endl;
+				cout << "Процент равен " << p - 1 << endl;
 				break;
 			}
 		}
+
 	}
+
 	return 0;
 }
