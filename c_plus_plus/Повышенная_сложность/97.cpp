@@ -105,7 +105,5 @@ int main() {
 		fout.close();
 		generation++;
 	}
-	
-
 	return 0;
 }
