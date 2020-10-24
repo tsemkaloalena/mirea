@@ -48,19 +48,32 @@ int main() {
 
 
 		//Считаем кол-во плюсов и минусов
+		
 		for (j = 0; j < 4; j++) {
+			bool pl = false, mi = false;
 			if (x[j] == y[j]) {
 				plus++;
+				pl = true;
 			}
 			else {
 				for (k = 0; k < 4; k++) {
-					if ((x[j] == y[k]) and (k != j)) {
+					if ((x[k] == y[j]) and (k != j)) {
 						minus++;
+						mi = true;
 					}
 				}
 			}
+			if (pl) {
+				cout << "+";
+			}
+			else if (mi) {
+				cout << "-";
+			}
+			else {
+				cout << "*";
+			}
 		}
-
+		cout << endl;
 		
 		//cout << y[0] << " " << y[1] << " " << y[2] << " " << y[3] << endl;
 		cout << "Плюсов: " << plus << endl;
